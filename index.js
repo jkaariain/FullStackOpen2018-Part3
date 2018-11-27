@@ -1,8 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const morgan = require('morgan')
 const app = express()
 
 app.use(bodyParser.json())
+app.use(morgan('tiny'))
 
 let persons = [
   {
@@ -60,7 +62,7 @@ app.post('/api/persons', (req, res) => {
 
   if (body.name === undefined || body.number === undefined){
     return res.status(400).json({error: 'bad request'})
-  } else if (!persons.filter(person => person.name === body.name).empty) {
+  } else if (persons.filter(person => person.name === body.name).length > 0) {
     return res.status(400).json({error: 'name must be unique'})
   }
 
