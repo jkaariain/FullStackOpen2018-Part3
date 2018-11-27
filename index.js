@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
+const cors = require('cors')
 const app = express()
 
 app.use(bodyParser.json())
@@ -8,6 +9,7 @@ morgan.token('data', (req, res) => {
   return JSON.stringify(req.body)
 })
 app.use(morgan(':method :url :data :status :res[content-length] - :response-time ms'))
+app.use(cors())
 
 let persons = [
   {
@@ -78,6 +80,13 @@ app.post('/api/persons', (req, res) => {
   persons = persons.concat(person)
 
   res.json(person)
+})
+
+app.put('/api/persons/:id', (req, res) => {
+  const id = Number(req.params.id)
+  persons = persons.map(person => person.id !== id ? person : req.body)
+
+  res.status(204).end()
 })
 
 app.delete('/api/persons/:id', (req, res) => {
