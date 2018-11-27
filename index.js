@@ -1,5 +1,8 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
+
+app.use(bodyParser.json())
 
 let persons = [
   {
@@ -29,9 +32,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/info', (req, res) => {
-  const dateTime = new Date()
   res.send(`<p>puhelinluettelossa ${persons.length} henkilön tiedot</p>
-            <p>${dateTime}</p>`)
+            <p>${new Date()}</p>`)
 })
 
 app.get('/api/persons', (req, res) => {
@@ -47,6 +49,28 @@ app.get('/api/persons/:id', (req, res) => {
   } else {
     res.status(404).end()
   }
+})
+
+const generateId = () => {
+  return Math.floor(Math.random() * 4294967295) + 1
+}
+
+app.post('/api/persons', (req, res) => {
+  const body = req.body
+
+  if (body.name === undefined || body.number === undefined){
+    return res.status(400).json({error: 'bad request'})
+  }
+
+  const person = {
+    name: body.name,
+    number: body.number,
+    id: generateId()
+  }
+
+  persons = persons.concat(person)
+
+  res.json(person)
 })
 
 app.delete('/api/persons/:id', (req, res) => {
