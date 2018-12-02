@@ -1,11 +1,10 @@
 {
   "name": "address-book-backend",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Backend for the address book application",
   "main": "index.js",
   "scripts": {
-    "server": "node index.js",
-    "client": "react-scripts start",
+    "start": "node index.js",
     "watch": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +20,7 @@
   "homepage": "https://github.com/jkaari96/FullStackOpen2018-Part3#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "react": "^16.6.3",
