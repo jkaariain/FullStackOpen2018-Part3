@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const app = express()
 
+app.use(express.static('build'))
 app.use(bodyParser.json())
 morgan.token('data', (req, res) => {
   return JSON.stringify(req.body)
@@ -33,10 +34,6 @@ let persons = [
     "id": 4
   }
 ]
-
-app.get('/', (req, res) => {
-  res.json(persons)
-})
 
 app.get('/info', (req, res) => {
   res.send(`<p>puhelinluettelossa ${persons.length} henkilön tiedot</p>
