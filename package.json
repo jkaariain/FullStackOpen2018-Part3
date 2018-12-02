@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/jkaari96/FullStackOpen2018-Part3/issues"
   },
-  "homepage": "https://fast-hollows-92263.herokuapp.com",
+  "homepage": "https://github.com/jkaari96/FullStackOpen2018-Part3#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
