@@ -1,13 +1,13 @@
 {
-  "main.css": "/jkaari96/FullStackOpen2018-Part3/static/css/main.6c4a0ccc.chunk.css",
-  "main.js": "/jkaari96/FullStackOpen2018-Part3/static/js/main.cdf7ec1c.chunk.js",
-  "main.js.map": "/jkaari96/FullStackOpen2018-Part3/static/js/main.cdf7ec1c.chunk.js.map",
-  "static/js/1.d861c25e.chunk.js": "/jkaari96/FullStackOpen2018-Part3/static/js/1.d861c25e.chunk.js",
-  "static/js/1.d861c25e.chunk.js.map": "/jkaari96/FullStackOpen2018-Part3/static/js/1.d861c25e.chunk.js.map",
-  "runtime~main.js": "/jkaari96/FullStackOpen2018-Part3/static/js/runtime~main.125d20e8.js",
-  "runtime~main.js.map": "/jkaari96/FullStackOpen2018-Part3/static/js/runtime~main.125d20e8.js.map",
-  "static/css/main.6c4a0ccc.chunk.css.map": "/jkaari96/FullStackOpen2018-Part3/static/css/main.6c4a0ccc.chunk.css.map",
-  "index.html": "/jkaari96/FullStackOpen2018-Part3/index.html",
-  "precache-manifest.dc755d842ba42fcddf914144837eb18c.js": "/jkaari96/FullStackOpen2018-Part3/precache-manifest.dc755d842ba42fcddf914144837eb18c.js",
-  "service-worker.js": "/jkaari96/FullStackOpen2018-Part3/service-worker.js"
+  "main.css": "/static/css/main.6c4a0ccc.chunk.css",
+  "main.js": "/static/js/main.cdf7ec1c.chunk.js",
+  "main.js.map": "/static/js/main.cdf7ec1c.chunk.js.map",
+  "static/js/1.d861c25e.chunk.js": "/static/js/1.d861c25e.chunk.js",
+  "static/js/1.d861c25e.chunk.js.map": "/static/js/1.d861c25e.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/main.6c4a0ccc.chunk.css.map": "/static/css/main.6c4a0ccc.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.a5dcc8ec4540b272d5a78aae9b27a6fa.js": "/precache-manifest.a5dcc8ec4540b272d5a78aae9b27a6fa.js",
+  "service-worker.js": "/service-worker.js"
 }
